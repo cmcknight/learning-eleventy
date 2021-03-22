@@ -7,14 +7,47 @@
 body {
   font-family: Verdana, sans-serif;
   max-width: 100vw;
+  height: 100vh;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+.site-container {
+  display: flex;
+  justify-content: center;
+}
+
+.site-container .container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-content-width);
+}
+
+/*------------------- Site Header ------------------*/
+header {
+  width: 100vw;
+  background: DodgerBlue;
+  margin-bottom: 1rem;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  color: white;
+  justify-content: center;
   background: DodgerBlue;
+  color: white;
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
+.header .container {
   padding: 1rem;
+  width: 100%;
+  max-width: 60rem;
+
 }
 
 header .homelink a {
@@ -23,8 +56,6 @@ header .homelink a {
 }
 
 header .menu {
-  justify-self: flex-end;
-  padding-right: 1rem;
   align-self: flex-end;
 }
 
@@ -34,21 +65,34 @@ header .menu ul {
 
 header .menu li {
   display: inline;
+  padding: .5rem;
 }
 
 header .menu a {
   color: white;
   text-decoration: none;
-  padding-left: 1rem;
 }
 
-main section {
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+/*------------------ Home Page ---------------------*/
+.main .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main section {
   border: 1px solid  #ccc;
   margin: 1rem;
   border-radius: 1.1rem 1.1rem 0 0;
+  width: 100%;
+  max-width: 60rem;
 }
 
-main section h2 {
+.main section h2 {
   padding: .3rem;
   color: white;
   background: DodgerBlue;
@@ -56,16 +100,219 @@ main section h2 {
   border-radius: 1rem 1rem 0 0;
 }
 
-main section p {
+.main section p {
   padding: .3rem 1rem .3rem;
 }
 
+/*---------------- Home Page Blogroll -------------*/
+.blogroll {
+  max-width: 60rem;
+}
+
+.blogroll .blogroll-container article {
+  border: 1px solid DodgerBlue;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.blogroll .blogroll-container {
+  gap: 1rem;
+}
+
+.blogroll .blogroll-container article {
+  margin-bottom: 1rem;
+}
+
+.blogroll .blogroll-container article .article-header {
+  background: DodgerBlue;
+  color: white;
+  padding: .8rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.blogroll .blogroll-container article .article-header a {
+  color: white;
+  text-decoration: none;
+}
+.blogroll .blogroll-container article .blogroll-content-body {
+  padding: 1rem;
+}
+
+.blogroll .blogroll-container article .blogroll-content-body h1,
+.blogroll .blogroll-container article .blogroll-content-body h2,
+.blogroll .blogroll-container article .blogroll-content-body h3,
+.blogroll .blogroll-container article .blogroll-content-body h4,
+.blogroll .blogroll-container article .blogroll-content-body h5,
+.blogroll .blogroll-container article .blogroll-content-body h6 {
+  color: DodgerBlue;
+  padding-bottom: .3rem;
+}
+
+.blogroll .blogroll-container article .blogroll-content-body .read-more {
+  width: 100%;
+  max-width: 60rem;
+}
+.blogroll .blogroll-container article .blogroll-content-body .read-more {
+  text-align: right;
+}
+.blogroll .blogroll-container article .blogroll-content-body .read-more a {
+  text-decoration: none;
+  font-weight: bold;
+  color: DodgerBlue;
+  padding: 1rem 0;
+}
+
+.blogroll .blogroll-container article .blogroll-content-body p {
+  padding-bottom: .3rem;
+}
+
+/*------------------ Blog Post -----------------*/
+.blog-post {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.blog-post .container {
+  width: 100%;
+  max-width: 60rem;
+  border: 1px solid DodgerBlue;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.blog-post .blog-post-header {
+  color: white;
+  background: DodgerBlue;
+  padding: .5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.blog-post .blog-content {
+  padding: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.blog-post .blog-content p {
+  padding-bottom: .3rem;
+}
+
+.blog-post .blog-content h1,
+.blog-post .blog-content h2,
+.blog-post .blog-content h3,
+.blog-post .blog-content h4,
+.blog-post .blog-content h5,
+.blog-post .blog-content h6 {
+  color: DodgerBlue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: 1px solid DodgerBlue;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+}
+
+.blog-post .blog-content h2,
+.blog-post .blog-content h3,
+.blog-post .blog-content h4,
+.blog-post .blog-content h5,
+.blog-post .blog-content h6 {
+  margin-top: 1rem;
+}
+
+/*------------ Blog Page ---------------*/
+.blog-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-container .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 60rem;
+  margin: 1rem;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.blog-container .container .blog-content-container article h2, 
+.blog-container .container .blog-content-container article h3, 
+.blog-container .container .blog-content-container article h4, 
+.blog-container .container .blog-content-container article h5, 
+.blog-container .container .blog-content-container article h6 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.blog-container .container .blog-content-container article {
+  margin-bottom: 1rem;
+}
+
+.blog-container .container .blog-content-container article .article-header {
+  background: DodgerBlue;
+  padding: .8rem 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.blog-container .container .blog-content-container article .article-body h2, 
+.blog-container .container .blog-content-container article .article-body h3, 
+.blog-container .container .blog-content-container article .article-body h4, 
+.blog-container .container .blog-content-container article .article-body h5, 
+.blog-container .container .blog-content-container article .article-body h6 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: .5rem;
+}
+
+.blog-container .container .blog-content-container article .article-header h2 a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.blog-container .container .blog-content-container article .article-header time {
+  color: white;
+}
+
+.blog-container .container .blog-content-container article .article-body {
+  background: white;
+  border: 1px solid DodgerBlue;
+  padding: 1rem;
+}
+
+.blog-container .container .blog-content-container article .article-body a {
+  text-decoration: none;
+}
+
+.blog-container .container .blog-content-container article .article-body p {
+  padding-bottom: .5rem;
+}
+
+.blog-container .container .blog-content-container article .article-body ul {
+  padding-top: .5rem;
+}
+
+.blog-container .container .blog-content-container .page-nav {
+  margin-bottom: 1rem;
+}
+.blog-container .container .blog-content-container .page-nav ul {
+  list-style: none;
+}
+
+.blog-container .container .blog-content-container .page-nav ul a {
+  color: DodgerBlue;
+  text-decoration: none;
+  padding: 0 0 1rem 1rem;
+}
+
+/*--------------- Footer --------------------*/
 footer {
   text-align: center;
   background: DodgerBlue;
   padding: .5rem 0;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
